@@ -1,3 +1,4 @@
+
 footer {
     display: block;
     width: 100%;
@@ -6,12 +7,12 @@ footer {
 .container-footer {
     width: 100%;
     height: fit-content;
-    padding: 20px 30px;
     background-color: #09A3BE;
     color: white;
 }
 
 .row-card-detail {
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -25,6 +26,10 @@ footer {
     text-align: center;
     align-items: center;
     justify-content: center;
+    vertical-align: top;
+}
+.col-1 img{
+    padding-top: 15px;
 }
 
 .col-2 > .list-1 {
@@ -32,30 +37,79 @@ footer {
     list-style: decimal;
 }
 
-.col-3 > .list-2 {
-    display: block;
-    margin-left: 8px;
-    list-style: circle;
-}
-
-.col-3 > .list-2 > li .col-4 > .list-3 > li {
+.col-3 .list-2 li{
     display: flex;
-    flex-direction: col;
-    align-items: center;
+    flex-direction: row;
+    align-items: first baseline;
+    flex-direction: row;
+    align-self: baseline;
+    padding: 0px;
 }
 
-  
+.col-4 .list-3 li{
+    display: flex;
+    flex-direction: row;
+    align-items: first baseline;
+    flex-direction: row;
+    align-self: baseline;
+    padding: 0px;
+}
+
+
+
 .label-copyright {
     width: 100%;
     align-items: center;
     justify-content: center;
     background-color: #0B698b;
-    padding: 1vh;
     color: white;
     text-align: center;
+    padding: 10px 0px;
 }
 
 .instagram {
-    display: flexbox;
-    flex-direction: row;
+    padding: 1px;
+}
+
+.col-2 .list-1 li a{
+    padding-left: 20px;
+    text-align: center;
+    font-size: 15pt;
+}
+
+.col-3 .list-2 li a{
+    padding-left: 20px;
+    text-align: center;
+    font-size: 15pt;
+}
+
+.col-4 .list-3 li a{
+    padding-left: 20px;
+    text-align: center;
+    font-size: 15pt;
+}
+
+@media screen and (max-width: 900px) {
+    .row-card-detail {
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: 2fr;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .row-card-detail {
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 4fr);
+        grid-template-rows: 4fr;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 20px;
+    }
 }
