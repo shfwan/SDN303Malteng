@@ -8,10 +8,8 @@ import './App.css'
 function App() {
   return (
     <div >
-      {/* <Home/>
-      <Profil/>
-      <Contact/>
-      <Galeri/> */}
+      {<><Profil /><Contact /></>}
+
       <footer>
         <div className='container-footer'>
           <div className='row-card-detail'>

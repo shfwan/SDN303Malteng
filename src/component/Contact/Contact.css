@@ -1,0 +1,101 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0fbfd;
+    padding-bottom: 50px;
+}
+
+.Title{
+    align-items: center;
+    align-content: center;
+    color: black;
+    text-align: center;
+}
+.icon-contacts{
+    color: black;
+}
+.contact-1{
+    display: inline-block;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.contact-2{
+    display: inline-block;
+    margin-right: 20px;
+}
+.contact-3{
+    display: inline-block;
+}
+.contact-1 .object-1{
+    display: inline-block;
+    margin-right: 10px;
+    padding-bottom: 0px;
+}
+.contact-1 .object-2{
+    display: inline-block;
+    font-weight: 400;
+    align-items: center;
+}
+.contact-2 .object-1{
+    display: inline-block;
+    margin-right: 10px;
+    padding-bottom: 0px;
+}
+.contact-2 .object-2{
+    display: inline-block;
+    font-weight: 400;
+    align-items: center;
+}
+.contact-3 .object-1{
+    display: inline-block;
+    margin-right: 10px;
+    padding-bottom: 0px;
+}
+.contact-3 .object-2{
+    display: inline-block;
+    font-weight: 400;
+    align-items: center;
+}
+
+iframe{
+    width: 700px;
+    height: 450px;
+    border-radius: 10px;
+}
+.Pesan{
+    color: black;
+    text-align: center;
+}
+input{
+    width: 325px;
+    height: 30px;
+    column-gap: 200px;
+    background-color: #f0fbfd;
+    border-width: 0.1px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    font-size: 12pt;
+}
+.input-1{
+    margin-right: 50px;
+}
+
+textarea{
+    width: 700px;
+    padding: 10px;
+    background-color: #f0fbfd;
+    border-radius: 2px;
+    font-size: 12pt;
+}
+
+.button-kirim input{
+    background-color: #0b698b;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: 12pt;
+}

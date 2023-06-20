@@ -35,6 +35,7 @@ footer {
 .col-2 > .list-1 {
     display: block;
     list-style: decimal;
+    list-style-position: outside;
 }
 
 .col-3 .list-2 li{

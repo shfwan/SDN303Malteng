@@ -1,3 +1,98 @@
-section{
-    background-color: aqua;
+body{
+    background-color: #F0FBFD;
+    padding-top: 10px;
 }
+
+.container-stats{
+    width: 500px;
+    display: flex;
+}
+.profil-1{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0 auto;
+    width: fit-content;
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 8px 32px;
+    color: #023047;
+    transition: all 400ms ease;
+}
+.profil-1:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
+}
+.Details-1{
+    margin-right: 20PX;
+}
+.box-1{
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+.box-1 .object-1{
+    display: inline-block;
+    margin-right: 10px;
+}
+.box-1 .object-2{
+    display: inline-block;
+}
+.container{
+    width: 80%;
+    margin-inline: auto;
+}
+
+.profil-2{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0 50px 0;
+}
+
+.profil-2 .box-profil{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 0px;
+}
+
+.profil-2 .box-profil .box{
+    width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.box .sub-judul{
+    background-color:#0B698B ;
+    border-radius: 10px 10px 0 0;
+    height: 40px;
+}
+
+.box .isi{
+    padding: 1px 0 1px 0 ;
+    background-color: #0099b3;
+    border-radius: 0 0 10px 10px;
+    height: 180px;
+}
+.box .sub-judul h2{
+    padding-left: 20px;
+    text-align: start;
+    padding-bottom:10px;
+    font-weight: 500;
+}
+
+.box .isi h3{
+    padding: 10px;
+    align-items: baseline;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 17px;
+}
+.box .isi li{
+    margin: 10px;
+    align-self: flex-start;
+    font-weight: 200;
+    font-style: italic;}
