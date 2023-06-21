@@ -10,15 +10,15 @@ const Contact = () => {
             </div>
             {/* Icon contacts */}
             <div className="icon-contacts">
-                <div className="contact-1">
+                <div className="contact">
                     <img className="object-1" src="/src/assets/telp.png" alt="" width='40px' height='40px'/>
                     <h3 className='object-2'>08123344345</h3>
                 </div>
-                <div className="contact-2">
+                <div className="contact">
                     <img className="object-1" src="/src/assets/email.png" alt="" width='40px' height='40px'/>
                     <h3 className='object-2'>sd303@gmail.com</h3>
                 </div>
-                <div className="contact-3">
+                <div className="contact">
                     <img className="object-1" src="/src/assets/pin.png" alt="" width='40px' height='40px'/>
                     <h3 className='object-2'>C23M+PJ5, Seith, Leihitu, <br/> Central Maluku Regency, Maluku</h3>
                 </div>

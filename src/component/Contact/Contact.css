@@ -20,48 +20,24 @@ section{
     font-size: 20pt;
 }
 .icon-contacts{
+    display: flex;
+    flex-direction: row;
     color: black;
     align-items: center;
 }
-.contact-1{
-    display: inline-block;
+.contact {
+    display: flex;
     margin-right: 20px;
     align-items: center;
+    font-weight: lighter;
 }
 
-.contact-2{
-    display: inline-block;
-    margin-right: 20px;
-}
-.contact-3{
-    display: inline-block;
-}
-.contact-1 .object-1{
+.contact .object-1{
     display: inline-block;
     margin-right: 10px;
     padding-bottom: 0px;
 }
-.contact-1 .object-2{
-    display: inline-block;
-    font-weight: 400;
-    align-items: center;
-}
-.contact-2 .object-1{
-    display: inline-block;
-    margin-right: 10px;
-    padding-bottom: 0px;
-}
-.contact-2 .object-2{
-    display: inline-block;
-    font-weight: 400;
-    align-items: center;
-}
-.contact-3 .object-1{
-    display: inline-block;
-    margin-right: 10px;
-    padding-bottom: 0px;
-}
-.contact-3 .object-2{
+.contact .object-2{
     display: inline-block;
     font-weight: 400;
     align-items: center;

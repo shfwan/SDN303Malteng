@@ -38,11 +38,11 @@ const Profil = () => {
         <body>
             <div className="profil-1">
                 <div className="container-stats">
-                    <div className="Details-1" style={{ scale: '100%', width:'300px', height:'300px' }}>
+                    <div className="Details-1">
                         <Doughnut
                             data={data}
                             options={options}
-                        ></Doughnut>
+                        />
                     </div>
                     <div className="Details-2">
                         <div className="box-1">

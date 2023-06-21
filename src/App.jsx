@@ -10,7 +10,8 @@ import './App.css'
 function App() {
   return (
     <div >
-      <NavigationBar/> <Home/>
+      <NavigationBar/> <
+      Home/>
       {<><Profil /><Galeri/><Contact /></>}
       <footer>
         <div className='container-footer'>
