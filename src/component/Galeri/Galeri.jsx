@@ -1,27 +1,103 @@
-import f from '../../assets/IMG20230510094413.jpg'
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const Galeri = () => {
-    return(
-        <section className="flex flex-col justify-center items-center h-screen" style={{backgroundColor:'#F0FBFD'}}>
-            <div className="w-screen" style={{backgroundColor:'#00BFE0', height:'70vh', borderRadius:'0 0 100px 100px'}}>
-                {/* Tittle */}
-                <div className="flex flex-col items-center w-screen text-white">
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import './Galeri.css'
 
-                    <h1>Galeri SDN 303 Malteng</h1>
-                </div>
-                <div className="grid grid-rows-1 grid-cols-4">
-                    <div className="flex flex-row">
-                        <img src={f} alt="" />
-                        <div className=' absolute' style={{width:'100%', border:'2px solid #000000'}}>
-                            <div className='cursor-pointer' style={{backgroundColor:'#006D8F', padding:'10px 20px', opacity:'70%', color:'#FFFFFF', borderRadius: '50px'}}>
-                                <h2>View</h2>
-                            </div>
-                        </div>
+import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+
+import slide_image_1 from '../../assets/foto/img1.jpg';
+import slide_image_2 from '../../assets/foto/img2.jpg';
+import slide_image_3 from '../../assets/foto/img3.jpg';
+import slide_image_4 from '../../assets/foto/img4.jpg';
+import slide_image_5 from '../../assets/foto/img5.jpg';
+import slide_image_6 from '../../assets/foto/img6.jpg';
+import slide_image_7 from '../../assets/foto/img7.jpg';
+
+
+export default function Galeri() {
+    return (
+        <section>
+        <div className="container">
+            <div className="slide-container">
+                <div className="card-wrapper">
+                    <div className="title">
+                        <h1>Galeri SDN 303 Malteng</h1>
+                        <h3>Terdapat 6 kelas dengan 1 kelas darurat</h3>
                     </div>
+                    <Swiper
+                        effect={'coverflow'}
+                        grabCursor={true}
+                        centeredSlides={true}
+                        loop={true}
+                        slidesPerView={'auto'}
+                        coverflowEffect={{
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 2.5,
+                        }}
+                        pagination={{ el: '.swiper-pagination', clickable: true }}
+                        navigation={{
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                            clickable: true,
+                        }}
+                        modules={[EffectCoverflow, Pagination, Navigation]}
+                        className="swiper_container">
+                        <SwiperSlide className='card'>
+                            <div className="image-box">
+                                <img src={slide_image_1} alt="slide_image" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='card'>
+                            <div className="image-box">
+                                <img src={slide_image_2} alt="slide_image" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='card'>
+                            <div className="image-box">
+                                <img src={slide_image_3} alt="slide_image" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='card'>
+                            <div className="image-box">
+                                <img src={slide_image_4} alt="slide_image" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='card'>
+                            <div className="image-box">
+                                <img src={slide_image_5} alt="slide_image" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='card'>
+                            <div className="image-box">
+                                <img src={slide_image_6} alt="slide_image" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='card'>
+                            <div className="image-box">
+                                <img src={slide_image_7} alt="slide_image" />
+                            </div>
+                        </SwiperSlide>
+                        <div className="slider-controler">
+                            <div className="swiper-button-prev slider-arrow">
+                                <ion-icon name="arrow-back-outline"></ion-icon>
+                            </div>
+                            <div className="swiper-button-next slider-arrow">
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </div>
+                            <div className="swiper-pagination"></div>
+                        </div>
+                    </Swiper>
                 </div>
             </div>
+        </div>
+
         </section>
-    )
+    );
 }
 
-export default Galeri
+// export default Galeri;

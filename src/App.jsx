@@ -3,13 +3,15 @@ import Contact from './component/Contact/Contact'
 import Galeri from './component/Galeri/Galeri'
 import Home from './component/Home/Home'
 import Profil from './component/Profil/Profil'
+import NavigationBar from './component/NavigationBar/NavigationBar'
+
 import './App.css'
 
 function App() {
   return (
     <div >
-      {<><Profil /><Contact /></>}
-
+      <NavigationBar/> <Home/>
+      {<><Profil /><Galeri/><Contact /></>}
       <footer>
         <div className='container-footer'>
           <div className='row-card-detail'>

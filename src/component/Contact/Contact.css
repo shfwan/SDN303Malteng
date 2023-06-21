@@ -13,8 +13,15 @@ section{
     color: black;
     text-align: center;
 }
+.Title h1{
+    font-size: 24pt;
+}
+.Title h3{
+    font-size: 20pt;
+}
 .icon-contacts{
     color: black;
+    align-items: center;
 }
 .contact-1{
     display: inline-block;
@@ -62,7 +69,7 @@ section{
 
 iframe{
     width: 700px;
-    height: 450px;
+    height: 350px;
     border-radius: 10px;
 }
 .Pesan{
