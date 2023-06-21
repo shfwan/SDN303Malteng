@@ -15,6 +15,9 @@ import slide_image_4 from '../../assets/foto/img4.jpg';
 import slide_image_5 from '../../assets/foto/img5.jpg';
 import slide_image_6 from '../../assets/foto/img6.jpg';
 import slide_image_7 from '../../assets/foto/img7.jpg';
+import right from '../../assets/foto/arrow_right.jpg';
+import left from '../../assets/foto/left-arrow.jpg';
+
 
 
 export default function Galeri() {
@@ -83,11 +86,11 @@ export default function Galeri() {
                             </div>
                         </SwiperSlide>
                         <div className="slider-controler">
-                            <div className="swiper-button-prev slider-arrow">
-                                <ion-icon name="arrow-back-outline"></ion-icon>
+                        <div className="swiper-button-prev slider-arrow">
+                            <ion-icon src="D:\Web\SDN303Malteng\src\assets\chevron-back-circle-outline.svg"></ion-icon>
                             </div>
                             <div className="swiper-button-next slider-arrow">
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            <ion-icon src="D:\Web\SDN303Malteng\src\assets\chevron-forward-circle-outline.svg"></ion-icon>
                             </div>
                             <div className="swiper-pagination"></div>
                         </div>

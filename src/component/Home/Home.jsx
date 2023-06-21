@@ -15,7 +15,7 @@ const Home = () => {
                             <img src={iconSd} alt="icon " width="300px" height="300px" />
                             {/* Column 2 */}
                             <div className='container-block'>
-                                <h5>SDN 303 Maluku Tengah</h5>
+                                <h1>SDN 303 Maluku Tengah</h1>
                                 <h5>Sekolah ini berdiri dan beraktivitas pada Oktober 2011</h5>
                                 <h5>sampai sekarang (12 tahun).</h5>
                                 {/* PPDB btn */}
