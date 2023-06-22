@@ -19,7 +19,7 @@ import slide_image_7 from '../../assets/foto/img7.jpg';
 
 
 
-export default function Galeri() {
+const Galeri = () => {
     return (
         <section>
         <div className="container">
@@ -85,11 +85,11 @@ export default function Galeri() {
                             </div>
                         </SwiperSlide>
                         <div className="slider-controler">
-                        <div className="swiper-button-prev slider-arrow">
-                            <ion-icon src="D:\Web\SDN303Malteng\src\assets\chevron-back-circle-outline.svg"></ion-icon>
+                            <div className="swiper-button-prev slider-arrow">
+                                <ion-icon name="arrow-back-outline"></ion-icon>
                             </div>
                             <div className="swiper-button-next slider-arrow">
-                            <ion-icon src="D:\Web\SDN303Malteng\src\assets\chevron-forward-circle-outline.svg"></ion-icon>
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
                             </div>
                             <div className="swiper-pagination"></div>
                         </div>
@@ -102,4 +102,4 @@ export default function Galeri() {
     );
 }
 
-// export default Galeri;
+export default Galeri;

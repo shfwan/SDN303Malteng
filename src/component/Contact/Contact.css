@@ -1,11 +1,10 @@
-section{
+.contact-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #f0fbfd;
     padding-bottom: 50px;
-    min-height: fit-content;
 }
 
 .Title{
