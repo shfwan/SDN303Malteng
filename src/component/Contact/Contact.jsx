@@ -2,7 +2,7 @@ import './Contact.css'
 
 const Contact = () => {
     return(
-        <section className="flex flex-col justify-center items-center h-screen" style={{backgroundColor:'#F0FBFD'}}>
+        <section className="contact-section" style={{backgroundColor:'#F0FBFD'}}>
             {/* Title */}
             <div className="Title">
                 <h1>Kontak kami</h1>
@@ -28,13 +28,13 @@ const Contact = () => {
             <div className="Pesan">
                 <h1>Kirim Pesan</h1>
                 <form action="#" method="post">
-                    <div className="flex flex-col items-center">
+                    <div className="">
                         <div className="box">
                             <input style={{padding:'5px'}} className="input-1" type="text" name="" placeholder="Nama" id="" />
                             <input style={{padding:'5px'}} className="input-2" type="email" name="" placeholder="email@email.com" id="" />
                         </div>
                         <div className="pesan">
-                            <div className="flex items-center justify-center w-screen h-fit">
+                            <div className="">
                                 <textarea className="border rounded border-solid border-black" type="text" name="" placeholder="Pesan" id="" />
                             </div>
                             <div className="button-kirim">
