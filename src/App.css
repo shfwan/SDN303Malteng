@@ -36,6 +36,10 @@ footer {
     display: block;
     list-style: decimal;
     list-style-position: outside;
+    text-align: left;
+}
+.col-2 > .list-1 ul{
+    list-style-position: outside;
 }
 
 .col-3 .list-2 li{
@@ -74,8 +78,8 @@ footer {
 
 .col-2 .list-1 li a{
     padding-left: 20px;
-    text-align: center;
     font-size: 15pt;
+    list-style-position: outside;
 }
 
 .col-3 .list-2 li a{
@@ -86,7 +90,6 @@ footer {
 
 .col-4 .list-3 li a{
     padding-left: 20px;
-    text-align: center;
     font-size: 15pt;
 }
 

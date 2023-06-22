@@ -15,8 +15,7 @@ import slide_image_4 from '../../assets/foto/img4.jpg';
 import slide_image_5 from '../../assets/foto/img5.jpg';
 import slide_image_6 from '../../assets/foto/img6.jpg';
 import slide_image_7 from '../../assets/foto/img7.jpg';
-import right from '../../assets/foto/arrow_right.jpg';
-import left from '../../assets/foto/left-arrow.jpg';
+
 
 
 

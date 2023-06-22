@@ -2,7 +2,7 @@ import './Contact.css'
 
 const Contact = () => {
     return(
-        <section className="flex flex-col justify-center items-center h-screen" style={{backgroundColor:'#F0FBFD'}}>
+        <section style={{backgroundColor:'#F0FBFD'}}>
             {/* Title */}
             <div className="Title">
                 <h1>Kontak kami</h1>

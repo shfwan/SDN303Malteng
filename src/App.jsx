@@ -26,7 +26,7 @@ function App() {
             {/* layanan publik */}
             <div className='col-2'>
               <h3>LAYANAN PUBLIK</h3>
-              <ul className='list-1'>
+              <ul className='list-1 list-outside'>
                 <li><a>Pendaftaran Siswa Baru</a></li>
                 <li><a>Pembayaran Komite</a></li>
               </ul>
