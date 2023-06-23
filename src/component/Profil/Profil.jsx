@@ -8,8 +8,7 @@ ChartJS.register(
     Legend
 )
 
-const Profil = () => {
-
+export const Profil = () => {
     const data = {
         labels: ['Siswa', 'Guru', 'Operator'],
         datasets: [{
@@ -114,5 +113,3 @@ const Profil = () => {
     )
 
 }
-
-export default Profil
