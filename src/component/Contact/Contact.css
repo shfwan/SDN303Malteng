@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     background-color: #f0fbfd;
-    padding-bottom: 50px;
 }
 
 .Title{
@@ -32,7 +31,6 @@
     align-items: center;
     font-weight: lighter;
 }
-
 .contact .object-1{
     display: inline-block;
     margin-right: 10px;
@@ -44,7 +42,6 @@
     align-items: center;
     font-size: 13pt;
 }
-
 iframe{
     width: 700px;
     height: 350px;
@@ -60,6 +57,7 @@ input{
     height: 30px;
     column-gap: 200px;
     background-color: #f0fbfd;
+    color: black;
     border-width: 0.1px;
     margin-bottom: 10px;
     border-radius: 2px;
@@ -68,14 +66,12 @@ input{
 .input-1{
     margin-right: 50px;
 }
-
 textarea{
     width: 700px;
     background-color: #f0fbfd;
     border-radius: 2px;
     font-size: 12pt;
 }
-
 .button-kirim input{
     background-color: #0b698b;
     color: #fff;
@@ -84,80 +80,82 @@ textarea{
     text-align: center;
     font-size: 12pt;
 }
-@media screen and (max-width: 900px) {
-    iframe{
+@media screen and (max-width:900px) {
+    
+
+iframe{
         width: 600px;
         height: 350px;
-        border-radius: 10px;}
-    
+        border-radius: 10px;
+    }
     .icon-contacts{
-    display: flex;
-    flex-direction: column;
-    color: black;
-    align-items: start;
-}
-textarea{
-    width: 650px;
-    padding: 10px;
-    background-color: #f0fbfd;
-    border-radius: 2px;
-    font-size: 12pt;
-}
-input{
-    display: inline-block;
-    width: 290px;
-    height: 30px;
-    column-gap: 200px;
-    background-color: #f0fbfd;
-    border-width: 0.1px;
-    margin-bottom: 10px;
-    border-radius: 2px;
-    font-size: 12pt;
-}
-.input-1{
-    margin-right: 20px;
-}
+        display: flex;
+        flex-direction: column;
+        color: black;
+        align-items: start;
+    }
+    textarea{
+        width: 650px;
+        padding: 10px;
+        background-color: #f0fbfd;
+        border-radius: 2px;
+        font-size: 12pt;
+    }
+    input{
+        display: inline-block;
+        width: 290px;
+        height: 30px;
+        column-gap: 200px;
+        background-color: #f0fbfd;
+        border-width: 0.1px;
+        margin-bottom: 10px;
+        border-radius: 2px;
+        font-size: 12pt;
+    }
+    .input-1{
+        margin-right: 20px;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    iframe{
-    width: 400px;
-    height: 350px;
-    border-radius: 10px;}
-    input{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    width: 400px;
-    height: 30px;
-    padding: 10px;
-    background-color: #f0fbfd;
-    border-width: 0.1px;
-    margin-bottom: 10px;
-    border-radius: 2px;
-    font-size: 12pt;
-}
-textarea{
-    max-width: 500px;
-    width: 400px;
-    background-color: #f0fbfd;
-    border-radius: 2px;
-    font-size: 12pt;
-}
-.Title h1{
-    padding-top: 20px;
-    font-size: 20pt;
-}
-.Title h3{
-    font-size: 15pt;
-    font-weight: 500;
-}
-.button-kirim input{
-    background-color: #0b698b;
-    color: #fff;
-    width: 200px;
-    height: 40px;
-    text-align: center;
-    font-size: 12pt;
-}
+        iframe{
+        width: 400px;
+        height: 350px;
+        border-radius: 10px;}
+        input{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 400px;
+        height: 30px;
+        padding: 10px;
+        background-color: #f0fbfd;
+        border-width: 0.1px;
+        margin-bottom: 10px;
+        border-radius: 2px;
+        font-size: 12pt;
+    }
+    textarea{
+        max-width: 500px;
+        width: 400px;
+        background-color: #f0fbfd;
+        border-radius: 2px;
+        font-size: 12pt;
+    }
+    .Title h1{
+        padding-top: 20px;
+        font-size: 20pt;
+    }
+    .Title h3{
+        font-size: 15pt;
+        font-weight: 500;
+    }
+    .button-kirim input{
+        background-color: #0b698b;
+        color: #fff;
+        width: 200px;
+        height: 40px;
+        text-align: center;
+        font-size: 12pt;
+    }
 }

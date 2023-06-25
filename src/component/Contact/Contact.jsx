@@ -1,8 +1,8 @@
 import './Contact.css'
 
-const Contact = () => {
-    return (
-        <section className="contact-section" style={{ backgroundColor: '#F0FBFD' }}>
+export const Contact = () => {
+    return(
+        <section className="contact-section" style={{backgroundColor:'#F0FBFD'}}>
             {/* Title */}
             <div className="Title">
                 <h1>Kontak kami</h1>
@@ -11,16 +11,16 @@ const Contact = () => {
             {/* Icon contacts */}
             <div className="icon-contacts">
                 <div className="contact">
-                    <img className="object-1" src="/src/assets/telp.png" alt="" width='40px' height='40px' />
+                    <img className="object-1" src="/src/assets/telp.png" alt="" width='40px' height='40px'/>
                     <h3 className='object-2'>08123344345</h3>
                 </div>
                 <div className="contact">
-                    <img className="object-1" src="/src/assets/email.png" alt="" width='40px' height='40px' />
+                    <img className="object-1" src="/src/assets/email.png" alt="" width='40px' height='40px'/>
                     <h3 className='object-2'>sd303@gmail.com</h3>
                 </div>
                 <div className="contact">
-                    <img className="object-1" src="/src/assets/pin.png" alt="" width='40px' height='40px' />
-                    <h3 className='object-2'>C23M+PJ5, Seith, Leihitu, <br /> Central Maluku Regency, Maluku</h3>
+                    <img className="object-1" src="/src/assets/pin.png" alt="" width='40px' height='40px'/>
+                    <h3 className='object-2'>C23M+PJ5, Seith, Leihitu, <br/> Central Maluku Regency, Maluku</h3>
                 </div>
             </div>
             {/* Map */}
@@ -30,15 +30,15 @@ const Contact = () => {
                 <form action="#" method="post">
                     <div className="">
                         <div className="box">
-                            <input style={{ padding: '5px' }} className="input-1" type="text" name="" placeholder="Nama" id="" />
-                            <input style={{ padding: '5px' }} className="input-2" type="email" name="" placeholder="email@email.com" id="" />
+                            <input style={{padding:'5px'}} className="input-1" type="text" name="" placeholder="Nama" id="" />
+                            <input style={{padding:'5px'}} className="input-2" type="email" name="" placeholder="email@email.com" id="" />
                         </div>
                         <div className="pesan">
                             <div className="">
                                 <textarea className="border rounded border-solid border-black" type="text" name="" placeholder="Pesan" id="" />
                             </div>
                             <div className="button-kirim">
-                                <input type="submit" value="Kirim Pesan" />
+                                <input  type="submit" value="Kirim Pesan" />
                             </div>
                         </div>
                     </div>
@@ -47,5 +47,3 @@ const Contact = () => {
         </section>
     )
 }
-
-export default Contact
