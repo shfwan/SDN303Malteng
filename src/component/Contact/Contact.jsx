@@ -1,6 +1,6 @@
 import './Contact.css'
 
-export const Contact = () => {
+const Contact = () => {
     return(
         <section className="contact-section" style={{backgroundColor:'#F0FBFD'}}>
             {/* Title */}
@@ -47,3 +47,5 @@ export const Contact = () => {
         </section>
     )
 }
+
+export default Contact

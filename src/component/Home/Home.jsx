@@ -2,7 +2,7 @@ import Background from '/src/assets/background.jpg'
 import iconSd from './../../assets/school.png'
 import './Home.css'
 
-export const Home = () => {
+const Home = () => {
     return (
         <section 
             style={{backgroundImage: `url(${Background})`}}>
@@ -31,3 +31,5 @@ export const Home = () => {
         </section>
     )
 }
+
+export default Home

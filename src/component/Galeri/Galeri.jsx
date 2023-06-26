@@ -15,7 +15,7 @@ import slide_image_7 from '../../assets/foto/img7.jpg';
 
 
 
-export const Galeri = () => {
+const Galeri = () => {
     return (
         <section className='galeri-section'>
             <div className="container">
@@ -97,3 +97,5 @@ export const Galeri = () => {
         </section>
     );
 }
+
+export default Galeri
