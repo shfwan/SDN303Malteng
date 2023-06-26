@@ -1,13 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './Galeri.css'
-
 import { EffectCoverflow, Pagination, Navigation } from 'swiper';
-
 import slide_image_1 from '../../assets/foto/img1.jpg';
 import slide_image_2 from '../../assets/foto/img2.jpg';
 import slide_image_3 from '../../assets/foto/img3.jpg';
@@ -15,7 +12,6 @@ import slide_image_4 from '../../assets/foto/img4.jpg';
 import slide_image_5 from '../../assets/foto/img5.jpg';
 import slide_image_6 from '../../assets/foto/img6.jpg';
 import slide_image_7 from '../../assets/foto/img7.jpg';
-
 
 
 

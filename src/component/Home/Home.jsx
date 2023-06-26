@@ -1,5 +1,5 @@
 import Background from '/src/assets/background.jpg'
-import iconSd from './../../assets/sd.png'
+import iconSd from './../../assets/school.png'
 import './Home.css'
 
 export const Home = () => {

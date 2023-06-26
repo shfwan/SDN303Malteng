@@ -1,7 +1,6 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js"
 import { Doughnut } from "react-chartjs-2"
 import './Profil.css'
-
 ChartJS.register(
     ArcElement,
     Tooltip,
@@ -22,7 +21,6 @@ const Profil = () => {
             rotation: 90
         }],
     }
-
     const options = {
         responesive: true,
         borderRadius: '2px',
@@ -33,10 +31,8 @@ const Profil = () => {
         }
     }
     let total = [99, 10, 1]
-
     const clickInfo = () => {
         document.getElementById('more').style.display = 'none'
-
         const li = document.createElement('li')
         li.appendChild(document.createTextNode('Menciptakan iklim dan lingkungan pembelajaran yang kondusif dalam upaya meningkatkan mutu pembelajaran'))
         // li.appendChild(document.createTextNode('Mengembangkan bakat dan minat siswa'))
@@ -108,7 +104,6 @@ const Profil = () => {
                     </div>
                 </div>
             </div>
-
         </section>
     )
 

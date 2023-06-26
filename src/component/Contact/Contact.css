@@ -31,7 +31,6 @@
     align-items: center;
     font-weight: lighter;
 }
-
 .contact .object-1{
     display: inline-block;
     margin-right: 10px;
@@ -43,7 +42,6 @@
     align-items: center;
     font-size: 13pt;
 }
-
 iframe{
     width: 700px;
     height: 350px;
@@ -68,14 +66,12 @@ input{
 .input-1{
     margin-right: 50px;
 }
-
 textarea{
     width: 700px;
     background-color: #f0fbfd;
     border-radius: 2px;
     font-size: 12pt;
 }
-
 .button-kirim input{
     background-color: #0b698b;
     color: #fff;
@@ -84,13 +80,14 @@ textarea{
     text-align: center;
     font-size: 12pt;
 }
-@media screen and (max-width: 900px) {
-    iframe{
+@media screen and (max-width:900px) {
+    
+
+iframe{
         width: 600px;
         height: 350px;
         border-radius: 10px;
     }
-    
     .icon-contacts{
         display: flex;
         flex-direction: column;
