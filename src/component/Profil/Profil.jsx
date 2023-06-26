@@ -7,7 +7,9 @@ ChartJS.register(
     Legend
 )
 
-const Profil = () => {
+import iconKelas from './../../assets/college class-rafiki.svg'
+
+const Profil = (props) => {
     const data = {
         labels: ['Siswa', 'Guru', 'Operator'],
         datasets: [{
@@ -47,29 +49,32 @@ const Profil = () => {
     }
     return (
         <section className="profil-section">
-            <div className="profil-1">
-                <div className="container-stats">
-                    <div className="Details-1">
-                        <Doughnut
-                            data={data}
-                            options={options}
-                        />
+            <div className="container-kelas">
+                <div className="profil-1">
+                    <div className="container-stats">
+                        <div className="Details-1">
+                            <Doughnut
+                                data={data}
+                                options={options}
+                            />
+                        </div>
+                        <div className="Details-2">
+                            <div className="box-1">
+                            <div className="object-1"style={{ backgroundColor: '#77DECC', width: '30px', height: '30px', borderRadius: '15px' }}></div>
+                                <h4 className="object-2"> {total[0]} Siswa</h4>
+                            </div>
+                            <div className="box-1">
+                            <div className="object-1" style={{ backgroundColor: '#F8897E', width: '30px', height: '30px', borderRadius: '50%' }}></div>
+                                <h4 className="object-2"> {total[1]} Guru</h4>
+                            </div>
+                            <div className="box-1">
+                            <div className="object-1" style={{ backgroundColor: '#49C2FF', width: '30px', height: '30px', borderRadius: '50%' }}></div>
+                                <h4 className="object-2"> {total[2]} Operator</h4>
+                            </div>
+                        </div>
                     </div>
-                    <div className="Details-2">
-                        <div className="box-1">
-                        <div className="object-1"style={{ backgroundColor: '#77DECC', width: '30px', height: '30px', borderRadius: '15px' }}></div>
-                            <h4 className="object-2"> {total[0]} Siswa</h4>
-                        </div>
-                        <div className="box-1">
-                        <div className="object-1" style={{ backgroundColor: '#F8897E', width: '30px', height: '30px', borderRadius: '50%' }}></div>
-                            <h4 className="object-2"> {total[1]} Guru</h4>
-                        </div>
-                        <div className="box-1">
-                        <div className="object-1" style={{ backgroundColor: '#49C2FF', width: '30px', height: '30px', borderRadius: '50%' }}></div>
-                            <h4 className="object-2"> {total[2]} Operator</h4>
-                        </div>
-                        </div>
                 </div>
+                <img src={iconKelas} alt="" style={{scale:'100%'}}/>
             </div>
             <div className="profil-2">
                 <div className="container">

@@ -4,7 +4,7 @@ import './Home.css'
 
 const Home = () => {
     return (
-        <section 
+        <section
             style={{backgroundImage: `url(${Background})`}}>
                 {/* Container card */}
             <div className="container-card">

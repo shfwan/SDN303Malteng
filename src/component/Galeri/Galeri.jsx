@@ -5,17 +5,28 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './Galeri.css'
 import { EffectCoverflow, Pagination, Navigation } from 'swiper';
-import slide_image_1 from '../../assets/foto/img1.jpg';
-import slide_image_2 from '../../assets/foto/img2.jpg';
-import slide_image_3 from '../../assets/foto/img3.jpg';
-import slide_image_4 from '../../assets/foto/img4.jpg';
-import slide_image_5 from '../../assets/foto/img5.jpg';
-import slide_image_6 from '../../assets/foto/img6.jpg';
-import slide_image_7 from '../../assets/foto/img7.jpg';
+import slide_image_1 from '../../assets/foto/img1.jpg'
+import slide_image_2 from '../../assets/foto/img2.jpg'
+import slide_image_3 from '../../assets/foto/img3.jpg'
+import slide_image_4 from '../../assets/foto/img4.jpg'
+import slide_image_5 from '../../assets/foto/img5.jpg'
+import slide_image_6 from '../../assets/foto/img6.jpg'
+import slide_image_7 from '../../assets/foto/img7.jpg'
 
 
 
 const Galeri = () => {
+
+    const slide_image = [
+        { image: slide_image_1 },
+        { image: slide_image_2 },
+        { image: slide_image_3 },
+        { image: slide_image_4 },
+        { image: slide_image_5 },
+        { image: slide_image_6 },
+        { image: slide_image_7 },
+    ]
+
     return (
         <section className='galeri-section'>
             <div className="container">
@@ -45,41 +56,14 @@ const Galeri = () => {
                             }}
                             modules={[EffectCoverflow, Pagination, Navigation]}
                             className="swiper_container">
-                            <SwiperSlide className='card'>
-                                <div className="image-box">
-                                    <img src={slide_image_1} alt="slide_image" />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className='card'>
-                                <div className="image-box">
-                                    <img src={slide_image_2} alt="slide_image" />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className='card'>
-                                <div className="image-box">
-                                    <img src={slide_image_3} alt="slide_image" />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className='card'>
-                                <div className="image-box">
-                                    <img src={slide_image_4} alt="slide_image" />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className='card'>
-                                <div className="image-box">
-                                    <img src={slide_image_5} alt="slide_image" />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className='card'>
-                                <div className="image-box">
-                                    <img src={slide_image_6} alt="slide_image" />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className='card'>
-                                <div className="image-box">
-                                    <img src={slide_image_7} alt="slide_image" />
-                                </div>
-                            </SwiperSlide>
+                                {slide_image.map((img) => (
+                                    // eslint-disable-next-line react/jsx-key
+                                    <SwiperSlide className='card'>
+                                        <div className="image-box">
+                                            <img src={img.image} alt="slide_image" />
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
                             <div className="slider-controler">
                                 <div className="swiper-button-prev slider-arrow">
                                     <ion-icon name="arrow-back-outline"></ion-icon>
@@ -93,7 +77,6 @@ const Galeri = () => {
                     </div>
                 </div>
             </div>
-
         </section>
     );
 }

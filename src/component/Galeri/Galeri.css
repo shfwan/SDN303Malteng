@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     background-color:#09A3BE ;
-    border-radius: 0px 0px 50px 50px;
+    border-radius: 0 0 50px 50px;
 }
 .container{
     max-width: 1120px;
