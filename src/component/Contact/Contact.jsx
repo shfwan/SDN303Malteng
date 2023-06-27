@@ -8,7 +8,7 @@ const Contact = () => {
             <div className="container-contact">
                 {/* Map */}
                 <div className="container-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d970.2417583606509!2d128.03368126548833!3d-3.5959682522790226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sid!4v1686121496236!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d970.2417583606509!2d128.03368126548833!3d-3.5959682522790226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sid!4v1686121496236!5m2!1sen!2sid" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     <div className="icon-contacts">
                         <div className="contact">
                             <img className="object-1" src="/src/assets/telp.png" alt="" width='40px' height='40px'/>

@@ -9,22 +9,40 @@
     background-color: #F0FBFD;
 }
 .nav {
-    width: 95%;
+    width: 100%;
     display: flex;
-    background-color: white;
     color: white;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    padding: 1rem;
+    padding: 2rem;
     position: fixed;
-    top: 15px;
-    left: 50%;
-    transform: translate(-50%);
-    border-radius: 13px;
+    transition: all ease 200ms;
+}
+
+.nav-active {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0.5rem;
+    position: fixed;
+    background-color: white;
+    color: #09A3BE;
+    transition: all ease 200ms;
 }
 
 .nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    list-style: none;
+    font-weight: bolder;
+}
+.nav-active ul {
     padding: 0;
     margin: 0;
     display: flex;
@@ -45,13 +63,38 @@
     font-weight: bold;
 }
 
+.nav-active .title {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #09A3BE;
+}
+
 a {
     text-decoration: none;
 }
 
 .nav ul li {
     display: flex;
-    color:#09A3BE;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: fit-content;
+    cursor: pointer;
+    transition: all ease 200ms;
+}
+.nav-active ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: fit-content;
+    cursor: pointer;
+    transition: all ease 200ms;
+}
+
+.nav-active ul li {
+    display: inline-block;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -65,9 +108,19 @@ a {
     align-items: center;
     gap: 0.5em;
 }
+.nav-active .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
 
 
 .nav ul li:hover {
+    background-color: #0B698b;
+    color: white;
+    border-radius: 0.2em;
+}
+.nav-active ul li:hover {
     background-color: #0B698b;
     color: white;
     border-radius: 0.2em;
