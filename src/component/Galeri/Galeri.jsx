@@ -29,13 +29,13 @@ const Galeri = () => {
 
     return (
         <section className='galeri-section'>
+            <div className="title">
+                <h1>Galeri SDN 303 Malteng</h1>
+                <h3>Terdapat 6 kelas dengan 1 kelas darurat</h3>
+            </div>
             <div className="container">
                 <div className="slide-container">
                     <div className="card-wrapper">
-                        <div className="title">
-                            <h1>Galeri SDN 303 Malteng</h1>
-                            <h3>Terdapat 6 kelas dengan 1 kelas darurat</h3>
-                        </div>
                         <Swiper
                             effect={'coverflow'}
                             grabCursor={true}

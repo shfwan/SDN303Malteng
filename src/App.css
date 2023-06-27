@@ -9,7 +9,7 @@
     background-color: #F0FBFD;
 }
 .nav {
-    width: 100%;
+    width: 95%;
     display: flex;
     background-color: white;
     color: white;
@@ -17,6 +17,11 @@
     justify-content: space-between;
     gap: 2rem;
     padding: 1rem;
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 13px;
 }
 
 .nav ul {
@@ -45,18 +50,27 @@ a {
 }
 
 .nav ul li {
-    color:white;
+    display: flex;
+    color:#09A3BE;
     justify-content: center;
     align-items: center;
-    padding: 13px;
-    background-color: #09A3BE;
-    border-radius: 10px;
+    padding: 10px;
     height: fit-content;
     cursor: pointer;
+    transition: all ease 200ms;
 }
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
 
 .nav ul li:hover {
     background-color: #0B698b;
+    color: white;
+    border-radius: 0.2em;
 }
 
 footer {
