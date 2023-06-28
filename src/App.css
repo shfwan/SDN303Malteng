@@ -14,6 +14,7 @@
     color: white;
     align-items: center;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.150);
     gap: 2rem;
     padding: 2rem;
     position: fixed;
@@ -31,6 +32,7 @@
     background-color: white;
     color: #09A3BE;
     transition: all ease 200ms;
+    z-index: 1;
 }
 
 .nav ul {
@@ -49,6 +51,7 @@
     justify-content: space-evenly;
     gap: 1rem;
     list-style: none;
+    font-weight: bolder;
 }
 
 .title-inline {

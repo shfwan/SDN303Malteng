@@ -36,11 +36,14 @@ const Profil = (props) => {
     const clickInfo = () => {
         document.getElementById('more').style.display = 'none'
         const li = document.createElement('li')
+        const misiLi = [
+            
+        ]
         li.appendChild(document.createTextNode('Menciptakan iklim dan lingkungan pembelajaran yang kondusif dalam upaya meningkatkan mutu pembelajaran'))
-        // li.appendChild(document.createTextNode('Mengembangkan bakat dan minat siswa'))
-        // li.appendChild(document.createTextNode('Meningkatkan sarana dan prasarana pendidikan SD Negeri 303 Maluku Tengah'))
-        // li.appendChild(document.createTextNode('Meningkatkan 3 kemampuan dasar (Baca, Tulis, Hitung) siswa'))
-        // li.appendChild(document.createTextNode('Membina kerja sama yang baik dengan stackholder'))
+        li.appendChild(document.createTextNode('Mengembangkan bakat dan minat siswa'))
+        li.appendChild(document.createTextNode('Meningkatkan sarana dan prasarana pendidikan SD Negeri 303 Maluku Tengah'))
+        li.appendChild(document.createTextNode('Meningkatkan 3 kemampuan dasar (Baca, Tulis, Hitung) siswa'))
+        li.appendChild(document.createTextNode('Membina kerja sama yang baik dengan stackholder'))
         
         document.getElementById('isi-detail').style.height = "310px"
         setTimeout(() => {
@@ -87,7 +90,15 @@ const Profil = (props) => {
                                 <h3>Mewujudkan manusia yang segar bugar, benar-benar, pintar, akur, dan jujur berdasarkan IMTAQ dan IPTEK</h3>
                             </div>
                         </div>
-                        <div className="box" >
+                        <div className="box">
+                            <div className="sub-judul">
+                                <h2>Tujuan</h2>
+                            </div>
+                            <div className="isi">
+                                <h3>Harapan kami untuk mewujudkan sekolah yang berkualitas baik professional kerja maupun peningkatan mutu dan terwujud melalui bantuan dan perhatian dari semua pihak. </h3>
+                            </div>
+                        </div>
+                        <div className="box" style={{width:'65%', height: 'fit-content'}}>
                             <div className="sub-judul">
                                 <h2>Misi</h2>
                             </div>
@@ -96,14 +107,6 @@ const Profil = (props) => {
                                     <li>Meningkatkan Pemahaman dan pengalaman ajaran agama</li>
                                     <li>Membentuk kepribadian yang tangguh berdasarkan imtaq dan iptek <u id="more" onClick={clickInfo} style={{cursor:"pointer"}}>selengkapnya...</u></li>
                                 </ol>
-                            </div>
-                        </div>
-                        <div className="box" >
-                            <div className="sub-judul">
-                                <h2>Tujuan</h2>
-                            </div>
-                            <div className="isi">
-                                <h3>Harapan kami untuk mewujudkan sekolah yang berkualitas baik professional kerja maupun peningkatan mutu dan terwujud melalui bantuan dan perhatian dari semua pihak. </h3>
                             </div>
                         </div>
                     </div>

@@ -57,21 +57,21 @@ function App() {
   
   const [ navbar, setNavbar ] = useState(false)
 
-  const changeBackgroundNavbar = () => { (window.scrollY >= 75) ? setNavbar(true) : setNavbar(false) }
+  const changeBackgroundNavbar = () => { (window.scrollY >= 5) ? setNavbar(true) : setNavbar(false) }
   window.addEventListener('scroll', changeBackgroundNavbar)
 
   return (
     <div className='app'>
       <div className={navbar ? 'nav-active' : 'nav'}>
-              <span className='title-inline'>
+              <div className='title-inline'>
                   <img src={iconTutwuri} alt="icon-tutuwuri" width={40} style={{marginRight: '10px'}}/>
                   <a className='title' href='#'>SDN 303 Maluku Tengah</a>
-              </span>
+              </div>
               <ul>
                 {menuItem.map((menu) => (
                   // eslint-disable-next-line react/jsx-key
                   <li className={menu.title}>
-                    <Link to={menu.title} smooth={true} offset={1.1} duration={1000}>
+                    <Link to={menu.title} smooth={true} offset={1} duration={1000}>
                       <div className="nav-item">
                         {menu.icon}
                         {menu.title}
