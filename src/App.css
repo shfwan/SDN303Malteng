@@ -153,6 +153,7 @@ footer {
     height: fit-content;
     background-color: #09A3BE;
     color: white;
+    padding: 1em;
 }
 
 .row-card-detail {
