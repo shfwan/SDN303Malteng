@@ -19,6 +19,7 @@
     padding: 2rem;
     position: fixed;
     transition: all ease 200ms;
+    z-index: 1;
 }
 
 .nav-active {
@@ -33,7 +34,17 @@
     color: #09A3BE;
     transition: all ease 200ms;
     z-index: 1;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
 }
+
+.dropDownNavBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all ease 200ms;
+}
+
 
 .nav ul {
     padding: 0;
@@ -52,6 +63,10 @@
     gap: 1rem;
     list-style: none;
     font-weight: bolder;
+}
+
+#BsList {
+    display: none;
 }
 
 .title-inline {
@@ -81,7 +96,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    /* padding: 10px; */
     height: fit-content;
     cursor: pointer;
     transition: all ease 200ms;
@@ -90,24 +105,19 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    /* padding: 10px; */
     height: fit-content;
     cursor: pointer;
     transition: all ease 200ms;
 }
 
-.nav-active ul li {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
+.link-item {
     padding: 10px;
-    height: fit-content;
-    cursor: pointer;
-    transition: all ease 200ms;
 }
 
 .nav-item {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 0.5em;
 }
@@ -127,6 +137,10 @@ a {
     background-color: #0B698b;
     color: white;
     border-radius: 0.2em;
+}
+
+.btnClose {
+    display: none;
 }
 
 footer {
@@ -152,17 +166,21 @@ footer {
 .col-1 {
     display: flex;
     flex-direction: column;
-    width: 150px;
+    width: fit-content;
     text-align: center;
     align-items: center;
     justify-content: center;
     vertical-align: top;
 }
-.col-1 img{
-    padding-top: 15px;
-}
 
 .col-2 > .list-1 {
+    display: block;
+    list-style: decimal;
+    list-style-position: outside;
+    text-align: left;
+}
+
+.col-3 > .list-2 {
     display: block;
     list-style: decimal;
     list-style-position: outside;
@@ -202,25 +220,21 @@ footer {
     padding: 10px 0px;
 }
 
-.instagram {
-    padding: 1px;
-}
-
 .col-2 .list-1 li a{
     padding-left: 20px;
-    font-size: 15pt;
+    font-size: 12pt;
     list-style-position: outside;
 }
 
 .col-3 .list-2 li a{
     padding-left: 20px;
     text-align: center;
-    font-size: 15pt;
+    font-size: 12pt;
 }
 
 .col-4 .list-3 li a{
     padding-left: 20px;
-    font-size: 15pt;
+    font-size: 12pt;
 }
 
 .bg-item {
@@ -228,27 +242,342 @@ footer {
     background-color: #09A3BE;
 }
 
-@media screen and (max-width: 900px) {
-    .row-card-detail {
-        width: auto;
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        grid-template-rows: 2fr;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        padding-left: 20px;
+@media screen and (min-width: 200px) and (max-width: 900px) {
+    /* Navbar */
+    .nav {
+        display: block;
+        height: fit-content;
+        color: white;
+        padding: 0.5rem;
+        transition: all ease 500ms;
     }
+    
+    .nav-active {
+        display: block;
+        height: fit-content;
+        color: #09A3BE;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        padding: 0.5rem;
+        transition: all ease 500ms;
+        
+    }
+
+    #iconTut {
+        display: none;
+    }
+
+
+    .dropDownNavBar #BsList {
+        display: flex;
+        scale: 200%;
+        cursor: pointer;
+        background-color: #09A3BE;
+        color: #F0FBFD;
+        padding: 0.5px;
+        border-radius: 2px;
+        transition: all ease 200ms;
+    }
+
+    .dropDownNavBar-active #BsList {
+        display: flex;
+        scale: 170%;
+        cursor: pointer;
+        background-color: #09A3BE;
+        color: #F0FBFD;
+        padding: 1.5px;
+        border-radius: 2px;
+        transform: rotate(90deg);
+        transition: all ease 200ms;
+    }
+
+    .dropDownNavBar {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: all ease 200ms;
+        
+    }
+
+    .span-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .nav .dropDownNavBar ul {
+        display: none;
+        transition: all ease 200ms;
+    }
+    .nav-active .dropDownNavBar ul {
+        display: none;
+        transition: all ease 200ms;
+    }
+
+    .nav .dropDownNavBar-active ul {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        transition: all ease 200ms;
+        background-color: white;
+        color: #09A3BE;
+        border-radius: 1.5em;
+        padding: 1em;
+
+    }
+    .nav-active .dropDownNavBar-active ul {
+        display: flex;
+        flex-direction: column;
+        transition: all ease 200ms;
+        padding: 1em;
+    }
+    
+    .nav .dropDownNavBar-active ul li .link-item {
+        width: 100%;
+    }
+    
+    .nav-active .dropDownNavBar-active ul li .link-item {
+        width: 100%;
+    }
+
+    .nav .title {
+        color: white;
+    }
+    
+    .nav-active .title {
+        color: #09A3BE;
+    }
+
+    .btnClose {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        scale: 120%;
+        color: red;
+    }
+
+    .btnClose:hover {
+        color: white;
+    }
+    /* Navbar */
+
+    /* Footer */
+    
+    .row-card-detail {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 1.5em;
+        gap: 1em;
+    }
+    
+    .col-1 {
+        width: fit-content;
+        font-size: 10.5pt;
+    }
+
+    .col-2 {
+        font-size: 9pt;
+    }
+    .col-3 {
+        font-size: 9pt;
+    }
+    .col-4 {
+        font-size: 9pt;
+    }
+
+    .col-2 > .list-1 > li > a {
+        font-size: 9pt;
+    }
+    .col-3 > .list-2 > li > a {
+        font-size: 9pt;
+    }
+    .col-4 > .list-3 > li > a {
+        font-size: 9pt;
+    }
+    
+    .BsGeoAlt {
+        scale: 1.5;
+    }
+
+    .label-copyright {
+        font-size: 10pt;
+    }
+    /* Footer */
+
 }
-@media screen and (max-width: 600px) {
-    .row-card-detail {
-        width: auto;
-        display: grid;
-        grid-template-columns: repeat(1, 4fr);
-        grid-template-rows: 4fr;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        padding-left: 20px;
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    /* Navbar */
+    .nav {
+        display: block;
+        height: fit-content;
+        color: white;
+        padding: 0.5rem;
+        transition: all ease 500ms;
     }
+    
+    .nav-active {
+        display: block;
+        height: fit-content;
+        color: #09A3BE;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        padding: 0.5rem;
+        transition: all ease 500ms;
+        
+    }
+
+    #iconTut {
+        display: none;
+    }
+
+
+    .dropDownNavBar #BsList {
+        display: flex;
+        scale: 200%;
+        cursor: pointer;
+        background-color: #09A3BE;
+        color: #F0FBFD;
+        padding: 0.5px;
+        border-radius: 2px;
+        transition: all ease 200ms;
+    }
+
+    .dropDownNavBar-active #BsList {
+        display: flex;
+        scale: 170%;
+        cursor: pointer;
+        background-color: #09A3BE;
+        color: #F0FBFD;
+        padding: 1.5px;
+        border-radius: 2px;
+        transform: rotate(90deg);
+        transition: all ease 200ms;
+    }
+
+    .dropDownNavBar {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: all ease 200ms;
+        
+    }
+
+    .span-title {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav .dropDownNavBar ul {
+        display: none;
+        transition: all ease 200ms;
+    }
+    .nav-active .dropDownNavBar ul {
+        display: none;
+        transition: all ease 200ms;
+    }
+
+    .nav .dropDownNavBar-active ul {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        transition: all ease 200ms;
+        background-color: white;
+        color: #09A3BE;
+        border-radius: 1.5em;
+        padding: 1em;
+
+    }
+    .nav-active .dropDownNavBar-active ul {
+        display: flex;
+        flex-direction: column;
+        transition: all ease 200ms;
+        padding: 1em;
+    }
+    
+    .nav .dropDownNavBar-active ul li .link-item {
+        width: 100%;
+    }
+    
+    .nav-active .dropDownNavBar-active ul li .link-item {
+        width: 100%;
+    }
+
+    .nav .title {
+        color: white;
+    }
+    
+    .nav-active .title {
+        color: #09A3BE;
+    }
+
+    .btnClose {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        scale: 120%;
+        color: red;
+    }
+
+    .btnClose:hover {
+        color: white;
+    }
+    /* Navbar */
+
+    /* Footer */
+    
+    .row-card-detail {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        padding: 1.5em;
+        gap: 1em;
+    }
+    
+    .col-1 {
+        width: fit-content;
+        font-size: 10.5pt;
+    }
+
+    .col-2 {
+        font-size: 9pt;
+    }
+    .col-3 {
+        font-size: 9pt;
+    }
+    .col-4 {
+        font-size: 9pt;
+    }
+
+    .col-2 > .list-1 > li > a {
+        font-size: 9pt;
+    }
+    .col-3 > .list-2 > li > a {
+        font-size: 9pt;
+    }
+    .col-4 > .list-3 > li > a {
+        font-size: 9pt;
+    }
+    
+    .BsGeoAlt {
+        scale: 1.5;
+    }
+
+    .label-copyright {
+        font-size: 10pt;
+    }
+    /* Footer */
+
 }

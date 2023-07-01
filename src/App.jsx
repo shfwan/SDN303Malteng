@@ -5,29 +5,24 @@ import Home from './component/Home/Home'
 import Profil from './component/Profil/Profil'
 
 import iconTutwuri from './assets/tut.png'
+import {BsFillEnvelopeAtFill, BsGeoAlt, BsHouse, BsImages, BsInfoCircle, BsInstagram, BsList, BsPersonLinesFill, BsTelephoneFill, BsXLg} from 'react-icons/bs'
 
 import { Link } from 'react-scroll'
 import './App.css'
 import { useState } from 'react'
 
 function App() {
-
   const menuItem = [
     {
       id: 1,
       title: 'Home',
-      icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-house" viewBox="0 0 16 16">
-              <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
-            </svg>,
+      icon: <BsHouse/>,
       component: <Home/>
     },
     {
       id: 2,
       title: 'Profil',
-      icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-info-circle" viewBox="0 0 16 16">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-            </svg>,
+      icon: <BsInfoCircle/>,
       component:
         <div className="bg-item">
           <Profil/>
@@ -36,50 +31,76 @@ function App() {
     {
       id: 3,
       title: 'Galeri',
-      icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-images" viewBox="0 0 16 16">
-              <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-              <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/>
-            </svg>,
+      icon: <BsImages/>,
       component: <Galeri/>
     },
     {
       id: 4,
       title: 'Contact',
-      icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-lines-fill" viewBox="0 0 16 16">
-              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
-            </svg>,
+      icon: <BsPersonLinesFill/>,
       component: 
         <div className="bg-item">
           <Contact/>
         </div>
     },
+    {
+      id: 'btnClose',
+      icon: <div className="btnClose"><BsXLg/></div>,
+    },
   ]
   
   const [ navbar, setNavbar ] = useState(false)
+  const [ dropNavBar, setDropNavBar ] = useState(false)
 
-  const changeBackgroundNavbar = () => { (window.scrollY >= 5) ? setNavbar(true) : setNavbar(false) }
-  window.addEventListener('scroll', changeBackgroundNavbar)
+  window.addEventListener('scroll', () => { (window.scrollY >= 5) ? setNavbar(true) : setNavbar(false) } )
+  
+  const dropDown = () => {
+    document.getElementById('dropDown').addEventListener('click', () => {
+      setDropNavBar(true)
+    })
+  }
+
+  const btnList = () => {
+    menuItem.map((menu) => {
+      document.getElementById(menu.id).addEventListener('click', () => {
+        setDropNavBar(false)
+      })
+    })
+  }
+
+  const btnClose = () => {
+    document.getElementById('btnClose').addEventListener('click', () => {
+      setDropNavBar(false)
+    })
+  }
 
   return (
     <div className='app'>
-      <div className={navbar ? 'nav-active' : 'nav'}>
-              <div className='title-inline'>
-                  <img src={iconTutwuri} alt="icon-tutuwuri" width={40} style={{marginRight: '10px'}}/>
-                  <a className='title' href='#'>SDN 303 Maluku Tengah</a>
-              </div>
-              <ul>
-                {menuItem.map((menu) => (
-                  // eslint-disable-next-line react/jsx-key
-                  <li className={menu.title}>
-                    <Link to={menu.title} smooth={true} offset={1} duration={1000}>
-                      <div className="nav-item">
-                        {menu.icon}
-                        {menu.title}
-                      </div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+      <div className={navbar ? 'nav-active' : 'nav'} id='navigation'>
+        <div className={dropNavBar ? 'dropDownNavBar-active' : 'dropDownNavBar'}>
+          <div className='span-title' id='dropDown' onClick={dropDown}>
+            <div id="BsList">
+              <BsList/>
+            </div>
+            <div className='title-inline'>
+                <img id='iconTut' src={iconTutwuri} alt="icon-tutuwuri" width={40} style={{marginRight: '10px'}}/>
+                <a className='title'>SDN 303 Maluku Tengah</a>
+            </div>
+          </div>
+            <ul>
+              {menuItem.map((menu) => (
+                // eslint-disable-next-line react/jsx-key
+                <li className={menu.title} id={menu.id} onClick={btnClose}>
+                  <Link className='link-item' id={menu.id} onClick={btnList} to={menu.title} smooth={true} offset={1} duration={1000}>
+                    <div className="nav-item">
+                      {menu.icon}
+                      {menu.title}
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+        </div>
       </div>
       {menuItem.map((menu) => (
         // eslint-disable-next-line react/jsx-key
@@ -100,9 +121,27 @@ function App() {
               {/* layanan publik */}
               <div className='col-2'>
                 <h3>LAYANAN PUBLIK</h3>
-                <ul className='list-1 list-outside'>
+                <ul className='list-1'>
                   <li><a>Pendaftaran Siswa Baru</a></li>
                   <li><a>Pembayaran Komite</a></li>
+                </ul>
+              </div>
+              {/* layanan publik */}
+              <div className='col-4'>
+                <h3>KANTOR LAYANAN</h3>
+                <ul className='list-3'>
+                  <li>
+                    <BsGeoAlt className='BsGeoAlt'/>
+                    <a>Desa seith, Kec. Leihitu, kab.Maluku Tengah</a>
+                  </li>
+                  <li>
+                  <BsTelephoneFill/>
+                    <a>090000001</a>
+                  </li>
+                  <li>
+                  <BsFillEnvelopeAtFill/>
+                    <a>sdn303@gmail.com</a>
+                  </li>
                 </ul>
               </div>
               {/* layanan publik */}
@@ -110,52 +149,16 @@ function App() {
                 <h3>IKUTI KAMI</h3>
                 <ul className='list-2'>
                   <li>
-                    <div className='instagram'>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-instagram" viewBox="0 0 16 16">
-                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                      </svg>
-                    </div>
-                    <div className="name">
-                      <a>shafwan____</a>
-                    </div>
+                    <BsInstagram/>
+                    <a>shafwan____</a>
                   </li>
                   <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-instagram" viewBox="0 0 16 16">
-                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                    </svg>
+                    <BsInstagram/>
                     <a>asril_khalid</a>
                   </li>
                   <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-instagram" viewBox="0 0 16 16">
-                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                    </svg>
+                    <BsInstagram/>
                     <a>ali_putuhena</a>
-                  </li>
-                </ul>
-
-              </div>
-              {/* layanan publik */}
-              <div className='col-4'>
-                <h3>KANTOR LAYANAN</h3>
-                <ul className='list-3'>
-                  <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-geo-alt" viewBox="0 0 16 16">
-                      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-                      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                    </svg>
-                    <a>Desa seith, Kec. Leihitu, kab.Maluku Tengah</a>
-                  </li>
-                  <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-telephone-fill" viewBox="0 0 16 16">
-                      <path fillRule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                    </svg>
-                    <a>090000001</a>
-                  </li>
-                  <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-envelope-fill" viewBox="0 0 16 16">
-                      <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-                    </svg>
-                    <a>sdn303@gmail.com</a>
                   </li>
                 </ul>
               </div>
@@ -163,7 +166,7 @@ function App() {
           </div>
           {/* Copyright */}
           <div className='label-copyright' style={{ backgroundColor: '#0B698B', color: 'white' }}>
-            <h5 style={{ textAlign: 'center' }} >Copyright &#169; By Kelompok 6</h5>
+            <label style={{ textAlign: 'center' }} >Copyright &#169; By Kelompok 6</label>
           </div>
       </footer>
     </div>

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     height: fit-content;
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 2em 2em;
 }
 
 .Title{
@@ -49,12 +49,9 @@
     margin-right: 20px;
     align-items: center;
     font-weight: lighter;
+    gap: 0.6em;
 }
-.contact .object-1{
-    display: inline-block;
-    margin-right: 10px;
-    padding-bottom: 0px;
-}
+
 .contact .object-2{
     display: inline-block;
     font-weight: 400;
@@ -124,82 +121,129 @@ textarea:focus {
     font-size: 12pt;
     cursor: pointer;
 }
-@media screen and (max-width:900px) {
-    
 
-iframe{
-        width: 600px;
-        height: 350px;
-        border-radius: 10px;
+@media screen and (min-width: 200px) and (max-width:900px) {
+    .contact-section {
+        display: flex;
+        align-items: center;
     }
+    
+    .Title{
+        align-items: center;
+        align-content: center;
+        color: black;
+        text-align: center;
+    }
+    
+    
+    .container-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        margin-top: 2em;
+    }
+    
+    .container-map {
+        width: fit-content;
+        padding: 1em;
+    }
+    
+    .container-information {
+        border-radius: 20px;
+        padding: 16px;
+        width: 100%;
+        scale: 100%;
+        margin-bottom: 2em;
+    }
+    
     .icon-contacts{
         display: flex;
         flex-direction: column;
-        color: black;
+        gap: 1.5em;
         align-items: start;
     }
-    textarea{
-        width: 650px;
-        padding: 10px;
-        background-color: #f0fbfd;
-        border-radius: 2px;
+    .contact {
+        gap: 0.5em;
+    }
+
+    .contact .object-2{
         font-size: 12pt;
     }
-    input{
-        display: inline-block;
-        width: 290px;
-        height: 30px;
-        column-gap: 200px;
-        background-color: #f0fbfd;
-        border-width: 0.1px;
-        margin-bottom: 10px;
-        border-radius: 2px;
-        font-size: 12pt;
+    
+    iframe{
+        scale: 100%;
+        width: 100%;
+        height: 250px;
     }
-    .input-1{
-        margin-right: 20px;
+
+    .iconContact {
+        display: none;
     }
+    
 }
 
-@media screen and (max-width: 600px) {
-        iframe{
-        width: 400px;
-        height: 350px;
-        border-radius: 10px;}
-        input{
+@media screen and (min-width: 700px) and (max-width:900px) {
+    .contact-section {
+        display: flex;
+        align-items: center;
+    }
+    
+    .Title{
+        align-items: center;
+        align-content: center;
+        color: black;
+        text-align: center;
+    }
+    
+    
+    .container-contact {
         display: flex;
         flex-direction: column;
-        align-content: center;
-        width: 400px;
-        height: 30px;
-        padding: 10px;
-        background-color: #f0fbfd;
-        border-width: 0.1px;
-        margin-bottom: 10px;
-        border-radius: 2px;
+        gap: 2em;
+        margin-top: 2em;
+    }
+    
+    .container-map {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: fit-content;
+        padding: 1em;
+        scale: 95%;
+    }
+    
+    .container-information {
+        border-radius: 20px;
+        padding: 16px;
+        width: 100%;
+        scale: 95%;
+        margin-bottom: 2em;
+    }
+    
+    .icon-contacts{
+        top: 1em;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 1.5em;
+        align-items: start;
+    }
+    .contact {
+        gap: 0.5em;
+    }
+
+    .contact .object-2{
         font-size: 12pt;
     }
-    textarea{
-        max-width: 500px;
-        width: 400px;
-        background-color: #f0fbfd;
-        border-radius: 2px;
-        font-size: 12pt;
+    
+    iframe{
+        scale: 100%;
+        width: 75vh;
+        height: 40vh;
     }
-    .Title h1{
-        padding-top: 20px;
-        font-size: 20pt;
+
+    .iconContact {
+        display: none;
     }
-    .Title h3{
-        font-size: 15pt;
-        font-weight: 500;
-    }
-    .button-kirim input{
-        background-color: #0b698b;
-        color: #fff;
-        width: 200px;
-        height: 40px;
-        text-align: center;
-        font-size: 12pt;
-    }
+    
 }

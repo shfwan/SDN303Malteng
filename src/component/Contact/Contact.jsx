@@ -29,7 +29,7 @@ const Contact = () => {
                         <h1 style={{fontSize:'18pt', color:'#0b698b'}}>Kontak kami</h1>
                     </div>
                     {/* Icon contacts */}
-                    <img src={iconContact} alt=""  style={{scale:'100%'}}/>
+                    <img className='iconContact' src={iconContact} alt=""  style={{scale:'100%'}}/>
                     <div className="Pesan">
                         <h3 style={{fontSize:'10pt', color:'gray', fontWeight:'normal'}}>Silahkan kirimkan kritik dan saran anda</h3>
                         {/* <h1>Kirim Pesan</h1> */}

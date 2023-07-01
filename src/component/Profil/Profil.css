@@ -1,17 +1,23 @@
 .profil-section{
-    display: inline-flex;
+    display: flex;
     background-color: #F0FBFD;
-    height: fit-content;
-    width: 100%;
+    height: 100vh;
     align-items: center;
     flex-direction: row;
     justify-content: center;
     border-radius: 0 0 50px 50px;
 }
 
+.title-profil {
+    scale: 100%;
+    margin-bottom: 1.5em;
+    text-align: center;
+    color: #0099b3;
+}
+
 .container-stats{
-    top: 5em;   
     display: flex;
+    width: 100%;
 }
 
 .container-kelas {
@@ -37,6 +43,10 @@
     transform: scale(1.02);
     box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
 }
+
+.iconProfil {
+    scale: 85%;
+}
 .Details-1{
     margin-right: 20px;
     scale: 100%;
@@ -48,6 +58,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 8em;
 }
 .box-1 {
     display: flex;
@@ -56,22 +67,22 @@
 .object-2 {
     margin-left: 10px;
 }
-.container{
+.container-box {
     width: 80%;
     margin-inline: auto;
 }
 .profil-2{
     width: fit-content;
-    min-height: 50vh;
     display: flex;
     align-items: center;
-    justify-content:stretch;
 }
-.profil-2 .box-profil{
+.box-profil{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     row-gap: 2em;
+    transform: translateY(3.5%);
 }
 .profil-2 .box-profil .box{
     width: 300px;
@@ -82,41 +93,228 @@
     background-color:#0B698B ;
     border-radius: 10px 10px 0 0;
     height: 40px;
+    font-size: 12pt;
+    font-weight: bold;
 }
 .box .isi{
-    padding: 1px 0 1px 0 ;
+    padding: 0.5em 0;
     background-color: #0099b3;
     border-radius: 0 0 10px 10px;
     height: 180px;
     text-align: left;
     transition: height 0.5s;
+    font-size: 12pt;
+    font-weight: bold;
+    overflow: scroll;
+
 }
 .box .sub-judul h2{
     padding-left: 20px;
     text-align: start;
     padding-bottom:10px;
-    font-weight: 500;
 }
 .box .isi h3{
     padding: 10px;
-    font-style: italic;
-    font-weight: 200;
-    font-size: 17px;
+    font-weight: normal;
+    font-size: 12pt;
 }
 .box .isi li{
-    margin: 10px;
     align-self: flex-start;
-    font-weight: 200;
-    font-style: italic;
+    font-weight: normal;
     transition: opacity 1s;
 }
 
-@media screen and (max-width: 600px) {
-    .profil-1 {
-        scale: 90%;
+#box-misi {
+    width: 100%;
+    height: fit-content;
+}
+
+@media screen and (min-width: 200px) and (max-width: 414px) {
+
+    .profil-section {
+        flex-direction: column;
+        border-radius:  0 0 1em 1em;
+        height: fit-content;    }
+    
+    .container-kelas {
+        width: 100%;
+        top: 20px;
+        align-items: center;
     }
-    .Details-1 {
-        width: 250px;
+
+    .title-profil {
+        scale: 100%;
+        top: 10px;
+        position: absolute;
+        text-align: center;
+        color: #0099b3;
+    }
+
+    .iconProfil {
+        display: none;
+    }
+    
+    .profil-1{
+        margin: 0;
+        scale: 65%;
+    }
+    
+      
+    .container-box {
+        width: 100%;
+        padding: 10px;
+        align-items: center;
+        display: block;
+        overflow: scroll;
+    }
+    .profil-2{
+        width: 100%;
+        display: flex;
         height: fit-content;
+        bottom: 1.5em;
+        position: relative;
+        align-items: center;
     }
+    .box-profil{
+        display: flex;
+        width: fit-content;
+        flex-wrap:nowrap;
+        justify-content: start;
+        gap:1.5em;
+        flex-direction: row;
+    }
+
+    .box {
+        text-align: center;
+        color: white;
+    }
+
+    .box .sub-judul{
+        background-color:#0B698B ;
+        border-radius: 10px 10px 0 0;
+        height: fit-content;
+        width: 40vh;
+        
+    }
+    .box .isi{
+        width: 40vh;
+        padding: 1px 0 1px 0 ;
+        background-color: #0099b3;
+        border-radius: 0 0 10px 10px;
+        height: 180px;
+        text-align: left;
+        transition: height 0.5s;
+    }
+
+    #isi-detail {
+        height: none;
+    }
+
+}
+
+@media screen and (min-width: 414px) and (max-width: 700px) {
+
+    .profil-section {
+        flex-direction: column;
+        border-radius:  0 0 1em 1em;
+        height: fit-content;    }
+    
+    .container-kelas {
+        width: 100%;
+        top: 20px;
+        align-items: center;
+    }
+
+    .title-profil {
+        scale: 100%;
+        top: 10px;
+        position: absolute;
+        text-align: center;
+        color: #0099b3;
+    }
+
+    .iconProfil {
+        display: none;
+    }
+    
+    .profil-1{
+        margin: 0;
+        scale: 65%;
+    }
+    
+      
+    .container-box {
+        width: 100%;
+        padding: 10px;
+        align-items: center;
+        display: block;
+        overflow: scroll;
+    }
+    .profil-2{
+        width: 100%;
+        display: flex;
+        height: fit-content;
+        bottom: 1.5em;
+        position: relative;
+        align-items: center;
+    }
+    .box-profil{
+        display: flex;
+        width: fit-content;
+        flex-wrap:nowrap;
+        justify-content: start;
+        gap:2.7em;
+        flex-direction: row;
+    }
+
+    .box {
+        text-align: center;
+        color: white;
+    }
+
+    .box .sub-judul{
+        background-color:#0B698B ;
+        border-radius: 10px 10px 0 0;
+        height: fit-content;
+        width: 40vh;
+        
+    }
+    .box .isi{
+        width: 40vh;
+        padding: 1px 0 1px 0 ;
+        background-color: #0099b3;
+        border-radius: 0 0 10px 10px;
+        height: 180px;
+        text-align: left;
+        transition: height 0.5s;
+    }
+
+    #isi-detail {
+        height: none;
+    }
+
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    .profil-section {
+        display: flex;
+        flex-direction: column;
+        gap: 8vh;
+        padding-bottom: 5em;
+    }
+
+    .box-profil {
+        gap: 12px;
+    }
+    .profil-1 {
+        scale: 85%;
+    }
+    
+    .profil-2 {
+        display: flex;
+    }
+
+    .iconProfil {
+        display: none;
+    }
+
 }

@@ -1,5 +1,5 @@
 .galeri-section {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,19 +10,19 @@
 .container{
     width: 100%;
     padding: 40px 0;
-    scale: 100%;
+    scale: 90%;
     align-items: center;
 }
-.title {
+.title-galeri {
     align-items: center;
     align-content: center;
     color: #fff;
     text-align: center;
 }
-.title h1{
+.title-galeri h1{
     font-size: 24pt;
 }
-.title h3{
+.title-galeri h3{
     font-size: 19pt;
     font-weight: 300;
 }
@@ -34,10 +34,9 @@
 }
 .card-wrapper{
     width: 100%;
-    }
+}
 
 .card {
-    background-color: #fff;
     border-radius: 8px;
     width: 700px;
     height: 350px;
@@ -54,3 +53,56 @@
     border-radius: 8px;
 }
 
+#slider-btn {
+    scale: 55%;
+    background-color: rgba(9, 163, 190, 0.507);
+    color: white;
+    padding: 2em;
+    border-radius: 20%;
+}
+
+@media screen and (min-width: 200px) and (max-width: 900px) {
+    .galeri-section {
+        height: fit-content;
+        border-radius: 0 0 1em 1em;
+    }
+    .container{
+        scale: 90%;
+    }
+    .title-galeri {
+        top: 1.5em;
+        position: relative;
+        color: white;
+        scale: 80%;
+    }
+    .title-galeri h1{
+        font-size: 22pt;
+    }
+    .title-galeri h3{
+        font-size: 14pt;
+        font-weight: 300;
+    }
+    
+    .card-wrapper{
+        width: 100%;
+    }
+    
+    .card {
+        width: fit-content;
+        height: fit-content;
+    }
+    
+    .card .image-box {
+        height: fit-content;
+    }
+    
+    .card .image-box img{
+        border-radius: 0.5em;
+    }
+
+    #slider-btn {
+        scale: 55%;
+        padding: 2em;
+        border-radius: 20%;
+    }
+}

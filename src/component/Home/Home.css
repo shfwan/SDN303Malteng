@@ -10,7 +10,7 @@
 }
 
 .container-card {
-    width: fit-content;
+    width: 50%;
 }
 
 .corner-card {
@@ -25,7 +25,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    width: fit-content;
+    width: 100%;
 }
 
 .container-block {
@@ -36,14 +36,14 @@
     overflow: auto;
 }
 
-h1 {
-    font-weight: bold;
-    /* font-size: 36px; */
+h5 {
+    font-weight: bolder;
+    font-size: 22pt;
 }
 
-h5 {
-    font-weight: 300;
-    /* font-size: 16px; */
+article {
+    font-weight: normal;
+    font-size: 12pt;
 }
 
 .ppdb-btn {
@@ -69,3 +69,95 @@ h5 {
     color: #fff;
     text-decoration: none;
 }
+
+@media screen and (min-width: 200px) and (max-width: 700px) {
+    h1 {
+        font-weight: bold;
+    }
+    
+    h5 {
+        font-weight: bolder;
+        font-size: 18pt;
+    }
+    
+    article {
+        font-size: 12pt;
+    }
+
+    .container-card {
+        width: 100%;
+        scale: 90%;
+    }
+
+    .corner-card {
+        backdrop-filter: blur(1.5px);
+    }
+    
+    .column-card {
+        flex-direction: column;
+    }
+    
+    
+    .ppdb-btn {
+        text-align: center;
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        float: left;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        border: 2px solid white;
+        padding: 10px 30px;
+        margin: 5px 0;
+        font-size: medium;
+    }
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    h1 {
+        font-weight: bold;
+    }
+    
+    h5 {
+        font-weight: bolder;
+        font-size: 18pt;
+    }
+    
+    article {
+        font-size: 12pt;
+    }
+
+    .container-card {
+        width: 60%;
+        scale: 90%;
+    }
+
+    .iconHome {
+        scale: 130%;
+    }
+
+    .corner-card {
+        backdrop-filter: blur(1.5px);
+    }
+    
+    .column-card {
+        flex-direction: column;
+    }
+    
+    
+    .ppdb-btn {
+        text-align: center;
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        float: left;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        border: 2px solid white;
+        padding: 10px 30px;
+        margin: 5px 0;
+        font-size: medium;
+    }
+}
+

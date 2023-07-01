@@ -10,12 +10,11 @@ const Home = () => {
                 <div className='corner-card'>
                     <div className='column-card'>
                         {/* Column 1 */}
-                        <img src={iconSd} alt="icon " width="300px" height="300px" />
+                        <img className='iconHome' src={iconSd} alt="icon " width="300px" height="300px" />
                         {/* Column 2 */}
                         <div className='container-block'>
                             <h5>SDN 303 Maluku Tengah</h5>
-                            <h5>Sekolah ini berdiri dan beraktivitas pada Oktober 2011</h5>
-                            <h5>sampai sekarang (12 tahun).</h5>
+                            <article>Sekolah ini berdiri dan beraktivitas pada Oktober 2011 sampai sekarang (12 tahun).</article>
                             {/* PPDB btn */}
                             <div className='ppdb-btn' style={{cursor:'pointer'}}>
                                 <a href="#"style={{marginRight:'9px'}}>PPDB</a>

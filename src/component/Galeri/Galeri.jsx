@@ -29,7 +29,7 @@ const Galeri = () => {
 
     return (
         <section className='galeri-section'>
-            <div className="title">
+            <div className="title-galeri">
                 <h1>Galeri SDN 303 Malteng</h1>
                 <h3>Terdapat 6 kelas dengan 1 kelas darurat</h3>
             </div>
@@ -65,10 +65,10 @@ const Galeri = () => {
                                     </SwiperSlide>
                                 ))}
                             <div className="slider-controler">
-                                <div className="swiper-button-prev slider-arrow">
+                                <div className="swiper-button-prev slider-arrow" id='slider-btn'>
                                     <ion-icon name="arrow-back-outline"></ion-icon>
                                 </div>
-                                <div className="swiper-button-next slider-arrow">
+                                <div className="swiper-button-next slider-arrow" id='slider-btn'>
                                     <ion-icon name="arrow-forward-outline"></ion-icon>
                                 </div>
                                 <div className="swiper-pagination"></div>

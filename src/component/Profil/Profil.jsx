@@ -9,7 +9,7 @@ ChartJS.register(
 
 import iconKelas from './../../assets/college class-rafiki.svg'
 
-const Profil = (props) => {
+const Profil = () => {
     const data = {
         labels: ['Siswa', 'Guru', 'Operator'],
         datasets: [{
@@ -33,26 +33,12 @@ const Profil = (props) => {
         }
     }
     let total = [99, 10, 1]
-    const clickInfo = () => {
-        document.getElementById('more').style.display = 'none'
-        const li = document.createElement('li')
-        const misiLi = [
-            
-        ]
-        li.appendChild(document.createTextNode('Menciptakan iklim dan lingkungan pembelajaran yang kondusif dalam upaya meningkatkan mutu pembelajaran'))
-        li.appendChild(document.createTextNode('Mengembangkan bakat dan minat siswa'))
-        li.appendChild(document.createTextNode('Meningkatkan sarana dan prasarana pendidikan SD Negeri 303 Maluku Tengah'))
-        li.appendChild(document.createTextNode('Meningkatkan 3 kemampuan dasar (Baca, Tulis, Hitung) siswa'))
-        li.appendChild(document.createTextNode('Membina kerja sama yang baik dengan stackholder'))
-        
-        document.getElementById('isi-detail').style.height = "310px"
-        setTimeout(() => {
-            document.getElementById('list').appendChild(li)
-        }, 150);
-    }
     return (
         <section className="profil-section">
             <div className="container-kelas">
+                <div className="title-profil">
+                    <h1>Total Keseluruhan</h1>
+                </div>
                 <div className="profil-1">
                     <div className="container-stats">
                         <div className="Details-1">
@@ -77,10 +63,10 @@ const Profil = (props) => {
                         </div>
                     </div>
                 </div>
-                <img src={iconKelas} alt="" style={{scale:'100%'}}/>
+                <img className="iconProfil" src={iconKelas} alt=""/>
             </div>
             <div className="profil-2">
-                <div className="container">
+                <div className="container-box">
                     <div className="box-profil">
                         <div className="box" >
                             <div className="sub-judul">
@@ -98,14 +84,19 @@ const Profil = (props) => {
                                 <h3>Harapan kami untuk mewujudkan sekolah yang berkualitas baik professional kerja maupun peningkatan mutu dan terwujud melalui bantuan dan perhatian dari semua pihak. </h3>
                             </div>
                         </div>
-                        <div className="box" style={{width:'65%', height: 'fit-content'}}>
-                            <div className="sub-judul">
+                        <div className="box">
+                            <div className="sub-judul" id="sub-judul">
                                 <h2>Misi</h2>
                             </div>
                             <div className="isi" id="isi-detail">
-                                <ol id="list">
+                                <ol>
                                     <li>Meningkatkan Pemahaman dan pengalaman ajaran agama</li>
-                                    <li>Membentuk kepribadian yang tangguh berdasarkan imtaq dan iptek <u id="more" onClick={clickInfo} style={{cursor:"pointer"}}>selengkapnya...</u></li>
+                                    <li>Membentuk kepribadian yang tangguh berdasarkan imtaq dan iptek</li>
+                                    <li>Menciptakan iklim dan lingkungan pembelajaran yang kondusif dalam upaya meningkatkan mutu pembelajaran</li>
+                                    <li>Mengembangkan bakat dan minat siswa</li>
+                                    <li>Meningkatkan sarana dan prasarana pendidikan SD Negeri 303 Maluku Tengah</li>
+                                    <li>Meningkatkan 3 kemampuan dasar (Baca Tulis Hitung) siswa</li>
+                                    <li>Membina kerja sama yang baik dengan stackholder</li>
                                 </ol>
                             </div>
                         </div>
