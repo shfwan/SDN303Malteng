@@ -10,6 +10,15 @@ import {BsFillEnvelopeAtFill, BsGeoAlt, BsHouse, BsImages, BsInfoCircle, BsInsta
 import { Link } from 'react-scroll'
 import './App.css'
 import { useState } from 'react'
+import User from './component/User/User'
+
+import shfwan from './assets/user/shfwan.jpg'
+import ein from './assets/user/ein.jpg'
+import endang from './assets/user/endang.jpg'
+import ali from './assets/user/ali.jpg'
+import hamsin from './assets/user/hamsin.jpg'
+import asril from './assets/user/asril.jpg'
+import rika from './assets/user/rika.jpg'
 
 function App() {
   const menuItem = [
@@ -71,6 +80,51 @@ function App() {
   const btnClose = () => {
     document.getElementById('btnClose').addEventListener('click', () => {
       setDropNavBar(false)
+    })
+  }
+
+  const userProfil = [
+    {
+      nim: 200101139,
+      nama: 'Shafwan Masyukur Nurlette',
+      foto: shfwan,
+    },
+    {
+      nim: 200101118,
+      nama: 'Erlin Indrayani Karim',
+      foto: ein,
+    },
+    {
+      nim: 200101180,
+      nama: 'Endang Tuanany',
+      foto: endang,
+    },
+    {
+      nim: 200101123,
+      nama: 'Hamsin Mony',
+      foto: hamsin,
+    },
+    {
+      nim: 200101115,
+      nama: 'Asril Khalid',
+      foto: asril,
+    },
+    {
+      nim: 200101112,
+      nama: 'Ali Putuhena',
+      foto: ali,
+    },
+    {
+      nim: 200101136,
+      nama: 'Rika Jahidin',
+      foto: rika,
+    },
+  ]
+
+  const btnKelompok = () => {
+    document.getElementById('kelompok').addEventListener('click', () => {
+      document.getElementById('user-profil').style.display = 'flex'
+      window.scrollTo(0, 10000)
     })
   }
 
@@ -166,9 +220,15 @@ function App() {
           </div>
           {/* Copyright */}
           <div className='label-copyright' style={{ backgroundColor: '#0B698B', color: 'white' }}>
-            <label style={{ textAlign: 'center' }} >Copyright &#169; By Kelompok 6</label>
+            <label style={{ textAlign: 'center' }} >Copyright &#169; By <span id='kelompok' onClick={btnKelompok} style={{cursor:'pointer'}}>Kelompok 6</span></label>
           </div>
       </footer>
+      <div className='user-profil' id='user-profil'>
+        {userProfil.map((item) => (
+        // eslint-disable-next-line react/jsx-key
+          <User idUser={item.nim} image={item.foto} nama={item.nama} nim={item.nim}/>
+        ))}
+      </div>
     </div>
   )
 }

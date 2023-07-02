@@ -243,6 +243,17 @@ footer {
     background-color: #09A3BE;
 }
 
+.user-profil {
+    position: relative;
+    display: none;
+    flex-direction: row;
+    padding: 1em;
+    gap: 1em;
+    align-items: start;
+    overflow: scroll;
+    background-color: #F0FBFD;
+}
+
 @media screen and (min-width: 200px) and (max-width: 900px) {
     /* Navbar */
     .nav {
@@ -410,7 +421,6 @@ footer {
         font-size: 10pt;
     }
     /* Footer */
-
 }
 @media screen and (min-width: 700px) and (max-width: 900px) {
     /* Navbar */
