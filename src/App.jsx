@@ -88,47 +88,63 @@ function App() {
       nim: 200101139,
       nama: 'Shafwan Masyukur Nurlette',
       foto: shfwan,
+      social: 'https://www.instagram.com/shafwan____/',
     },
     {
       nim: 200101118,
       nama: 'Erlin Indrayani Karim',
       foto: ein,
+      social: 'https://www.instagram.com/erlin_karim/',
     },
     {
       nim: 200101180,
       nama: 'Endang Tuanany',
       foto: endang,
+      social: 'https://www.facebook.com/profile.php?id=100068288614654',
     },
     {
       nim: 200101123,
       nama: 'Hamsin Mony',
       foto: hamsin,
+      social: 'https://www.instagram.com/hamsinmony367/',
     },
     {
       nim: 200101115,
       nama: 'Asril Khalid',
       foto: asril,
+      social: 'https://www.instagram.com/asril_khalid/',
     },
     {
       nim: 200101112,
       nama: 'Ali Putuhena',
       foto: ali,
+      social: 'https://www.instagram.com/ali.putuhena/',
     },
     {
       nim: 200101136,
       nama: 'Rika Jahidin',
       foto: rika,
+      social: 'https://www.instagram.com/rhikajahidin/',
     },
   ]
 
   const btnKelompok = () => {
-    document.getElementById('kelompok').addEventListener('click', () => {
-      document.getElementById('user-profil').style.display = 'flex'
-      window.scrollTo(0, 10000)
-    })
+    if(document.getElementById('user-profil').style.display === 'none') {
+      document.getElementById('kelompok').addEventListener('click', () => {
+        document.getElementById('kelompok').style.fontWeight = 'bold'
+        document.getElementById('user-profil').style.display = 'flex'
+        window.scrollTo(0, 10000)
+      }) 
+    } else {
+      document.getElementById('kelompok').addEventListener('click', () => {
+        document.getElementById('kelompok').style.fontWeight = 'normal'
+        document.getElementById('user-profil').style.display = 'none'
+      }) 
+    }
   }
 
   return (
+    <>
     <div className='app'>
       <div className={navbar ? 'nav-active' : 'nav'} id='navigation'>
         <div className={dropNavBar ? 'dropDownNavBar-active' : 'dropDownNavBar'}>
@@ -198,24 +214,6 @@ function App() {
                   </li>
                 </ul>
               </div>
-              {/* layanan publik */}
-              <div className='col-3'>
-                <h3>IKUTI KAMI</h3>
-                <ul className='list-2'>
-                  <li>
-                    <BsInstagram/>
-                    <a>shafwan____</a>
-                  </li>
-                  <li>
-                    <BsInstagram/>
-                    <a>asril_khalid</a>
-                  </li>
-                  <li>
-                    <BsInstagram/>
-                    <a>ali_putuhena</a>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
           {/* Copyright */}
@@ -225,11 +223,12 @@ function App() {
       </footer>
       <div className='user-profil' id='user-profil'>
         {userProfil.map((item) => (
-        // eslint-disable-next-line react/jsx-key
-          <User idUser={item.nim} image={item.foto} nama={item.nama} nim={item.nim}/>
+        // eslint-disable-next-line react/jsx-key, react/jsx-no-target-blank
+          <a href={item.social}  target="_blank"><User idUser={item.nim} image={item.foto} nama={item.nama} nim={item.nim}/></a>
         ))}
       </div>
     </div>
+    </>
   )
 }
 

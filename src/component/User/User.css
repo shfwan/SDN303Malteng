@@ -5,6 +5,12 @@
     box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
     padding: 1.5em 1em;
     border-radius: 1em;
+    transition: all ease 200ms;
+}
+
+.user-section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
 }
 
 .profil-user {

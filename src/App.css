@@ -181,23 +181,8 @@ footer {
     text-align: left;
 }
 
-.col-3 > .list-2 {
-    display: block;
-    list-style: decimal;
-    list-style-position: outside;
-    text-align: left;
-}
 .col-2 > .list-1 ul{
     list-style-position: outside;
-}
-
-.col-3 .list-2 li{
-    display: flex;
-    flex-direction: row;
-    align-items: first baseline;
-    flex-direction: row;
-    align-self: baseline;
-    padding: 0px;
 }
 
 .col-4 .list-3 li{
@@ -227,12 +212,6 @@ footer {
     list-style-position: outside;
 }
 
-.col-3 .list-2 li a{
-    padding-left: 20px;
-    text-align: center;
-    font-size: 12pt;
-}
-
 .col-4 .list-3 li a{
     padding-left: 20px;
     font-size: 12pt;
@@ -253,6 +232,15 @@ footer {
     overflow: scroll;
     background-color: #F0FBFD;
 }
+
+#kelompok {
+    cursor: pointer;
+}
+
+#kelompok:hover {
+    font-weight: bold;
+}
+
 
 @media screen and (min-width: 200px) and (max-width: 900px) {
     /* Navbar */
@@ -344,7 +332,7 @@ footer {
         display: flex;
         flex-direction: column;
         transition: all ease 200ms;
-        padding: 1em;
+        padding: 0.5em;
     }
     
     .nav .dropDownNavBar-active ul li .link-item {
@@ -396,17 +384,12 @@ footer {
     .col-2 {
         font-size: 9pt;
     }
-    .col-3 {
-        font-size: 9pt;
-    }
+    
     .col-4 {
         font-size: 9pt;
     }
 
     .col-2 > .list-1 > li > a {
-        font-size: 9pt;
-    }
-    .col-3 > .list-2 > li > a {
         font-size: 9pt;
     }
     .col-4 > .list-3 > li > a {
@@ -565,17 +548,12 @@ footer {
     .col-2 {
         font-size: 9pt;
     }
-    .col-3 {
-        font-size: 9pt;
-    }
+
     .col-4 {
         font-size: 9pt;
     }
 
     .col-2 > .list-1 > li > a {
-        font-size: 9pt;
-    }
-    .col-3 > .list-2 > li > a {
         font-size: 9pt;
     }
     .col-4 > .list-3 > li > a {

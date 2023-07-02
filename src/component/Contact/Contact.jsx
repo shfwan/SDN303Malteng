@@ -33,7 +33,7 @@ const Contact = () => {
                     <div className="Pesan">
                         <h3 style={{fontSize:'10pt', color:'gray', fontWeight:'normal'}}>Silahkan kirimkan kritik dan saran anda</h3>
                         {/* <h1>Kirim Pesan</h1> */}
-                        <form method="post">
+                        <form method="post" action='./../../../index.html'>
                             <div className="container-input">
                                 <input className='input-contact' type="text" name="" placeholder="Nama" id="" />
                                 <input className='input-contact' type="email" name="" placeholder="email@email.com" id="" />
